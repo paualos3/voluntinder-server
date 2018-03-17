@@ -6,6 +6,8 @@ module.exports = app => {
 
     require('./profile')(app)
     require('./position')(app)
+    require('./company')(app)
+
 
     app.get('/', function (req, res) {
         return res.send({status: 'up'})
