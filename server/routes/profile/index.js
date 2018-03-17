@@ -5,7 +5,7 @@ const f = require('../util').wrapAsyncRouterFunction
 module.exports = app => {
 
     app.get('/api/profile', isAuthenticated, f(async function (req, res) {
-        const userId = req.query.userId ? req.query.userId : req.userId
+        const userId = req.userId
         const user = await userModule.getProfile({userId: userId})
         res.json(user)
     }))

@@ -7,7 +7,7 @@ let dbConnection = null
 const collectionNames = {
     users: 'users',
     idSequence: 'id_counter',
-
+    company: 'company',
 }
 
 const connect = () => MongoClient.connect(config.mongoDbUri)
