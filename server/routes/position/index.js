@@ -5,10 +5,13 @@ const f = require('../util').wrapAsyncRouterFunction
 module.exports = app => {
 
     app.get('/api/position', isAuthenticated, f(async function (req, res) {
-        const positionId = req.params.ID
+        const {positionId, Lat, Long, Distance} = req.query
         var position;
         if (positionId) {
             position = await positionModule.getPosition({ID: positionId})
+            console.log(position)
+        } else if (Lat && Long && Distance){
+            position = await positionModule.getPositionNear({coordinates: [parseFloat(Lat), parseFloat(Long)], distance: Distance})
         } else {
             position = await positionModule.get()
         }
