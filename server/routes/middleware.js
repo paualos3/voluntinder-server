@@ -1,4 +1,5 @@
 const userModule = require('../modules/user')
+const companyModule = require('../modules/company')
 const errors = require('../modules/error')
 
 function logRequest(req) {
@@ -20,9 +21,10 @@ async function isAuthenticated(req, res, next) {
         return next(new errors.missingToken())
     }
 
-    const user = await userModule.get(authorizationToken)
+    var user = await userModule.get(authorizationToken)
 
     if (!user) {
+        user = await companyModule.get()
         return next(new errors.invalidToken())
     }
 

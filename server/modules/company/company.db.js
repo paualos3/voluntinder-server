@@ -14,16 +14,16 @@ async function get(token) {
 
 async function getCompany({companyId}) {
     const query = {
-        Name: companyId
+        id: companyId
     }
     console.log(query)
     return await collection().findOne(query)
 }
 
-async function updateCompany({Name, Description}) {
+async function updateCompany({id, Name, Picture, Description}) {
     console.log("Company: ", Name)
     const query = {
-        id: Name
+        id: id
     }
     const update = {
         $set: {
@@ -33,15 +33,16 @@ async function updateCompany({Name, Description}) {
     if (Name) {
         update.$set.Name = Name
     }
+    if (Picture) {
+        update.$set.Picture = Picture
+    }
     if (Description) {
         update.$set.Description = Description
     }
-
     const options = {
         upsert: false,
         returnOriginal: false
     }
-
     console.log(update)
     return await collection().updateOne(query, update, options)
 }

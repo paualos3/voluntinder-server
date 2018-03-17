@@ -5,8 +5,8 @@ const f = require('../util').wrapAsyncRouterFunction
 module.exports = app => {
 
     app.get('/api/company', isAuthenticated, f(async function (req, res) {
-        const companyId = req.query.Name
-        const company = await companyModule.getCompany({companyId: companyId})
+        const companyId = req.userId
+        const company = await companyModule.getCompany({companyId})
         res.json(company)
     }))
 
