@@ -24,6 +24,7 @@ async function isAuthenticated(req, res, next) {
     var user = await userModule.get(authorizationToken)
 
     if (!user) {
+        console.log("user not found")
         user = await companyModule.get(authorizationToken)
         if (!user) {
             return next(new errors.invalidToken())
