@@ -32,9 +32,9 @@ async function getPositionNear({coordinates, distance}) {
 async function getPosition({ID}) {
     console.log(ID)
     const query = {
-        ID: ID 
+        ID: ID
     }
-    console.log(query.ID)
+    console.log(query)
     return await collection().findOne(query, {_id: 0})
 }
 
