@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:orientation="vertical"
+                  android:gravity="center_vertical"
+                  android:layout_height="match_parent">
+
+        <RelativeLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/llayout1"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:orientation="vertical"
+                android:background="@drawable/card_border"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="20dp"
+                android:visibility="visible"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp">
+
+                <TextView
+                    android:id="@+id/cName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="#000"
+                    android:textSize="22sp"
+                    android:textAllCaps="true"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:text="Company Name" />
+
+                <TextView
+                    android:id="@+id/pos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:textSize="15sp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Position" />
+
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:textSize="15sp"
+                    android:layout_marginBottom="5dp"
+                    android:text="Timetable of the event" />
+
+                <TextView
+                    android:id="@+id/loca"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:textSize="15sp"
+                    android:text="Location" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llayout2"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:orientation="vertical"
+                android:background="@drawable/card_border"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:paddingBottom="20dp"
+                android:visibility="gone"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:src="@drawable/ic_thumbup_green_48dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textColor="#2E7D32"
+                    android:text="FINE! YOU'LL RECIVE A RESPONSE MESSAGE"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llayout3"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:orientation="vertical"
+                android:background="@drawable/card_border"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:paddingBottom="20dp"
+                android:visibility="gone"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:src="@drawable/ic_emotisad_red_48dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textColor="#B71C1C"
+                    android:text="OH! HOPE THE NEXT ONES LIKE YOU"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/reject"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+                android:clickable="true"
+                android:layout_alignParentStart="true"
+                android:background="#B71C1C"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="true"/>
+
+            <Button
+                android:id="@+id/accept"
+                android:background="#2E7D32"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+                android:clickable="true"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="true"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
