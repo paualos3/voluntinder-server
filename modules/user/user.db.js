@@ -1,4 +1,4 @@
-const {getCollection, collectionNames, generateNextId} = require('../db')
+const {getCollection, collectionNames, generateNextId} = require('../db/index')
 const collection = () => getCollection(collectionNames.users)
 const getNextId = () => generateNextId(collectionNames.users)
 
