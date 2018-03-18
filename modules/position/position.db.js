@@ -30,6 +30,7 @@ async function getPositionNear({coordinates, distance}) {
 }
 
 async function getPosition({ID}) {
+    console.log(ID)
     const query = {
         ID: String.valueOf(ID)
     }
