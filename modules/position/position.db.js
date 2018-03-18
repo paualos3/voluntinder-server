@@ -14,9 +14,8 @@ async function get() {
 async function getPositionNear({coordinates, distance}) {
     console.log("Distance: ", distance)
     console.log("Coordinates: ", coordinates)
-    collection().createIndex({"loc":"2dsphere"});
     return await collection().find({
-        /*loc :{
+        loc :{
             $near : {
                 $geometry : {
                     index : "Point" ,
@@ -24,7 +23,7 @@ async function getPositionNear({coordinates, distance}) {
                 },
                 $maxDistance : parseFloat(distance)
             }
-        }*/
+        }
     }).toArray()
 
 }
