@@ -33,7 +33,7 @@ async function getPosition({ID}) {
     const query = {
         ID: String.valueOf(ID)
     }
-    console.log(query)
+    console.log(query.ID)
     return await collection().findOne(query, {_id: 0})
 }
 
